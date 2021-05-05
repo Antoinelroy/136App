@@ -2,9 +2,11 @@
 136 Dice game
 
 
-Hey there, this is my first project ever so please be kind and indulgent :). This is a dice game invented by some of my friends. Usually it is a drinking game and you'd play with real dice, but i'm trying to adapt it to a mobile app.
+Hey there, this is my first project ever so please be kind and indulgent :). This is a dice game invented by some of my friends.
+Usually it is a drinking game and you'd play with real dice, but i'm trying to adapt it to a mobile app.
 
-The goal of the game is to get 1-3-6 with the dice. You get two throws each turn and on your second throw you can choose how many dice you throw (1,2,3 or 0). If you don't get 1-3-6 then the player with the highest hand wins the round. 
+The goal of the game is to get 1-3-6 with the dice. You get two throws each turn and on your second throw you can choose how many dice you throw (1,2,3 or 0). 
+If you don't get 1-3-6 then the player with the highest hand wins the round. 
 
 The highest hand table looks like this:
 - 6 6 6
