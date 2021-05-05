@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileTest1.MainPage">
+
+    <RelativeLayout>
+        <Image Source="https://136gameimages.s3.us-east-2.amazonaws.com/images/dice1.png" 
+               Scale="4"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.2,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.3,
+                                 Constant= 0}"
+               
+               x:Name="img1"
+               VerticalOptions="CenterAndExpand"
+               
+               >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer 
+                    Tapped="Image1_clicked"
+                    NumberOfTapsRequired="1">
+                </TapGestureRecognizer>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image Source="https://136gameimages.s3.us-east-2.amazonaws.com/images/dice3.png" 
+               Scale="4"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.75,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.3,
+                                 Constant= 0}"
+               x:Name="img2"
+               VerticalOptions="CenterAndExpand"
+               >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer 
+                    Tapped="Image2_clicked"
+                    NumberOfTapsRequired="1">
+                </TapGestureRecognizer>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Image Source="https://136gameimages.s3.us-east-2.amazonaws.com/images/dice6.png" 
+               Scale="4"
+               HorizontalOptions="Start"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.5,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.8,
+                                 Constant= 0}"
+               x:Name="img3"
+               VerticalOptions="CenterAndExpand"
+               >
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer 
+                    Tapped="Image3_clicked"
+                    NumberOfTapsRequired="1">
+                </TapGestureRecognizer>
+            </Image.GestureRecognizers>
+        </Image>
+
+        <Label Text="!!!!!136!!!!!" 
+               IsVisible="False" 
+               x:Name="onethreesix"
+               TextColor="Black"
+               FontSize="50"
+               RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.25,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.0,
+                                 Constant= 0}"
+               ></Label>
+
+        <Label
+            Text="Rolls left:"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.4,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.15,
+                                 Constant= 0}"
+            FontSize="18"
+            >
+            
+        </Label>
+        
+        <Label
+            x:Name="rollslefttext"
+            Text=""
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.6,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.15,
+                                 Constant= 0}"
+            FontSize="18"
+            >
+            
+        </Label>
+
+        <Label
+            x:Name="nextPlayer"
+            Text="Next player ->"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.35,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.55,
+                                 Constant= 0}"
+            FontSize="20"
+            FontAttributes="Bold"
+            IsVisible="False"
+            >
+            
+        </Label>
+
+        <Button Text="Roll!" 
+                Clicked="Handle_Clicked" 
+                BorderColor="#154269"
+                BorderWidth="5"
+                CornerRadius="10"
+                BackgroundColor="Aqua" 
+                VerticalOptions="CenterAndExpand"
+                HorizontalOptions="Center"
+                WidthRequest="200"
+                HeightRequest="100"
+                RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.25,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.25,
+                                 Constant= 0}"
+                x:Name="Button"
+                />
+
+        <BoxView 
+            WidthRequest="1000"
+            HeightRequest="1"
+            Color="Black"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.65,
+                                 Constant= 0}"
+            ></BoxView>
+
+        <Label
+            Text="Best hand yet:"
+            FontSize="18"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.05,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.7,
+                                 Constant= 0}"
+            >
+            
+        </Label>
+
+        <Image
+            Source=""
+            Scale="1.7"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.4,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.7,
+                                 Constant= 0}"
+            x:Name="bestHand1"
+            IsVisible="True"
+            >
+            
+        </Image>
+        <Image
+            Source=""
+            Scale="1.7"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.6,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.7,
+                                 Constant= 0}"
+            x:Name="bestHand2"
+            IsVisible="True"
+            >
+
+        </Image>
+        <Image
+            Source=""
+            Scale="1.7"
+            RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 0.8,
+                                 Constant= 0}"
+               RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent,
+                                 Property=Width,
+                                 Factor= 1.7,
+                                 Constant= 0}"
+            x:Name="bestHand3"
+            IsVisible="True"
+            >
+
+        </Image>
+
+
+    </RelativeLayout>
+
+</ContentPage>
